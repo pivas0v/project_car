@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.car {
+    width: 200px;
+    height: 100px;
+    background-color: #3498db;
+    position: absolute;
+    left: -200px; /* начальная позиция за левым краем экрана */
+    top: 50%;
+    /* transform: translateY(-50%); */
+    animation: moveCar 5s linear forwards; /* анимация движения машины */
+}
+
+@keyframes moveCar {
+    0% {
+        left: -200px;
+    }
+    50% {
+        left: calc(100% - 250px); /* остановка за 50px до конца правого края */
+    }
+    100% {
+        left: 82.5%; /* возвращение в начальную позицию */
+    }
+}
